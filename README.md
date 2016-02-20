@@ -97,7 +97,7 @@ On server
 
 ```javascript
 global.Intl = require(`intl`)
-require(`intl/locale-data/jsono/en.js`)
+require(`intl/locale-data/jsonp/en.js`)
 require(`intl/locale-data/jsonp/eu.js`)
 ...
 ```
