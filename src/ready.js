@@ -1,13 +1,35 @@
-const ready = (locale, run) => {
+const getJSON = (url) => {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest()
+        xhr.open(`get`, url, true)
+        xhr.responseType = `json`
+        xhr.onload = () => {
+            var status = xhr.status
+            if (status == 200) {
+                resolve(xhr.response)
+            } else {
+                reject(status)
+            }
+        }
+        xhr.send()
+    })
+}
+
+const ready = (localeDataUrl, run, forceLoadPolyfill) => {
     document.addEventListener(`DOMContentLoaded`, () => {
-        if (!global.Intl) {
-            require.ensure([
-                `intl`,
-                `intl/locale-data/jsonp/${locale}.js`
+        if (forceLoadPolyfill || !global.Intl) {
+            return require.ensure([
+                `intl`
             ], (require) => {
-                require(`intl`);
-                require(`intl/locale-data/jsonp/${locale}.js`);
-                run()
+                global.Intl = require(`intl`)
+                getJSON(localeDataUrl)
+                    .then(data=> {
+                        global.Intl.__addLocaleData(data)
+                        run()
+                    })
+                    .catch(()=> {
+                        run()
+                    })
             });
         }
         run()
