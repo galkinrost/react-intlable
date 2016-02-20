@@ -13,7 +13,7 @@
     "build:umd": "cross-env NODE_ENV=development webpack src/index.js dist/react-intlable.js",
     "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js dist/react-intlable.min.js",
     "build": "npm run build:lib && npm run build:umd && npm run build:umd:min && node ./prepublish",
-    "test": "mocha --compilers js:babel-register --timeout=5000 --recursive",
+    "test": "mocha --compilers js:babel-register --timeout=7000 --recursive",
     "test:watch": "npm test -- --watch"
   },
   "repository": {
@@ -48,11 +48,11 @@
     "mocha-jsdom": "1.0.0",
     "react": "0.14.7",
     "react-addons-test-utils": "0.14.7",
+    "react-dom": "0.14.7",
     "webpack": "1.12.13"
   },
   "dependencies": {
     "hoist-non-react-statics": "1.0.5",
-    "intl-messageformat": "1.2.0",
-    "intl": "1.1.0"
+    "intl-messageformat": "1.2.0"
   }
 }

@@ -1,7 +1,8 @@
 import expect from 'expect'
-import React, {Component, PropTypes} from 'react'
 import jsdom from 'mocha-jsdom'
+import React, {Component, PropTypes} from 'react'
 import TestUtils from 'react-addons-test-utils'
+import { renderToString } from 'react-dom/server'
 
 import IntlableProvider from '../src/IntlableProvider'
 
@@ -14,7 +15,6 @@ describe(`react-intlable`, () => {
             const messages = {
                 foo: `bar`
             }
-
             const locale = `en`
 
             class Wrapped extends Component {

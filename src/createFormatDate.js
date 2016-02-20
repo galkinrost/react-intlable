@@ -1,5 +1,3 @@
-import Intl from 'intl'
-
 const createFormatDate = context => (date, options) => {
     const dateTimeFormatter = new Intl.DateTimeFormat(context.locale, options)
 
