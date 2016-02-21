@@ -91,6 +91,8 @@ If you use webpack, you can use file-loader to get this url
 
 ### Universal rendering
 
+[Example](https://github.com/babotech/one-more-react-universal-example)
+
 For consistent results of internationalization you should use polyfill both on server and client 
 
 On server
