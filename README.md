@@ -1,4 +1,4 @@
-# React intlable
+# React intlable [![Build Status](https://travis-ci.org/babotech/react-intlable.svg?branch=master)](https://travis-ci.org/babotech/react-intlable)
 [intl-messageformat](https://github.com/yahoo/intl-messageformat) bindings for React
 
 ## Installation
