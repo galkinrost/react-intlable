@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Babo-Ltd/react-intlable.git"
+    "url": "git+https://github.com/babotech/react-intlable.git"
   },
   "keywords": [
     "react",
@@ -30,9 +30,9 @@
   "author": "Galkin Rostislav <galkinrost@gmail.com> (http://github.com/galkinrost)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Babo-Ltd/react-intlable/issues"
+    "url": "https://github.com/babotech/react-intlable/issues"
   },
-  "homepage": "https://github.com/Babo-Ltd/react-intlable#readme",
+  "homepage": "https://github.com/babotech/react-intlable#readme",
   "devDependencies": {
     "babel-cli": "6.5.1",
     "babel-core": "6.5.1",
