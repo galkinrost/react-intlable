@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, Children } from 'react'
+import { Children, Component, PropTypes } from 'react'
 
 class IntlableProvider extends Component {
 

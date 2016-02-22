@@ -1,6 +1,6 @@
-import expect from 'expect'
-
 import createFormatMessage, {traverseMessages} from '../src/createFormatMesage'
+
+import expect from 'expect'
 
 describe(`react-intlable`, () => {
 
@@ -34,7 +34,7 @@ describe(`react-intlable`, () => {
 
             const formatMessage = createFormatMessage(context)
 
-            expect(formatMessage(`views.welcome.title`, { name: 'World' }))
+            expect(formatMessage(`views.welcome.title`, { name: `World` }))
                 .toEqual(`Hello World!`)
         })
     })

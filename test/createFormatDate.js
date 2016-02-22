@@ -1,6 +1,6 @@
-import expect from 'expect'
-
 import createFormatDate from '../src/createFormatDate'
+
+import expect from 'expect'
 
 describe(`react-intlable`, () => {
 
@@ -12,7 +12,14 @@ describe(`react-intlable`, () => {
                 locale
             }
 
-            const date = new Date(2016, 2, 14, 12, 12, 12, 12)
+            const year = 2016
+            const month = 2
+            const day = 14
+            const hours = 12
+            const minutes = 12
+            const seconds = 12
+
+            const date = new Date(year, month, day, hours, minutes, seconds)
 
             const formatDate = createFormatDate(context)
 

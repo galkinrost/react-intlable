@@ -7,9 +7,9 @@ import hoist from 'hoist-non-react-statics'
 
 const intlable = (WrappedComponent) => {
 
-    class Intlable extends Component{
+    class Intlable extends Component {
         render() {
-            const intlProps= {
+            const intlProps = {
                 formatDate: createFormatDate(this.context),
                 formatMessage: createFormatMessage(this.context),
                 formatNumber: createFormatNumber(this.context)

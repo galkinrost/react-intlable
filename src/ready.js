@@ -1,14 +1,16 @@
+const successStatus = 200
+
 const getJSON = (url, cb) => {
     const xhr = new XMLHttpRequest()
     xhr.open(`get`, url, true)
     xhr.responseType = `json`
     xhr.onload = () => {
         const status = xhr.status
-        if (status == 200) {
-            cb(null, xhr.response)
-        } else {
-            cb(status)
+        if (status === successStatus) {
+            return cb(null, xhr.response)
         }
+
+        cb(status)
     }
     xhr.send()
 }

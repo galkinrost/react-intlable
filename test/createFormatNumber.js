@@ -1,6 +1,6 @@
-import expect from 'expect'
-
 import createFormatNumber from '../src/createFormatNumber'
+
+import expect from 'expect'
 
 describe(`react-intlable`, () => {
 

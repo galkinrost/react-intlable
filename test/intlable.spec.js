@@ -1,10 +1,11 @@
-import expect from 'expect'
-import React, {Component, PropTypes} from 'react'
-import jsdom from 'mocha-jsdom'
+import React, {Component} from 'react'
+
+import IntlableProvider from '../src/IntlableProvider'
 import TestUtils from 'react-addons-test-utils'
 
+import expect from 'expect'
 import intlable from '../src/intlable'
-import IntlableProvider from '../src/IntlableProvider'
+import jsdom from 'mocha-jsdom'
 
 describe(`react-intlable`, () => {
     jsdom()
@@ -93,4 +94,4 @@ describe(`react-intlable`, () => {
 
     })
 
-});
+})
