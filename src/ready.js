@@ -7,7 +7,9 @@ const getJSON = (url, cb) => {
     xhr.onload = () => {
         const status = xhr.status
         if (status === successStatus) {
-            return cb(null, xhr.response)
+            const response = typeof xhr.response === `string` ?
+                                JSON.parse(xhr.response) : xhr.response
+            return cb(null, response)
         }
 
         cb(status)
