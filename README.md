@@ -4,7 +4,7 @@
 ## Installation
 
 ```
-npm install --save react-intlable
+npm install --save intl-messageformat react-intlable
 ```
 
 ## Implementation
